@@ -1,5 +1,6 @@
 {
-  "name": "set-raspberry-ip",
+  "name": "dhcpcd-ui",
+  "description": "A user interface for dhcpcd.conf",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

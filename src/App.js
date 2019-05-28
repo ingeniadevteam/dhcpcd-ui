@@ -9,6 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      interface: 'eth0',
       dhcp: false,
       ip_address: '',
       routers: '',
@@ -41,6 +42,7 @@ class App extends Component {
     this.setState({formValid: false});
 
     const dhcpcd = {
+      interface: this.state.interface,
       dhcp: this.state.dhcp,
       ip_address: this.state.ip_address,
       routers: this.state.routers,
@@ -129,9 +131,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>eth0</p>
+        <p>dhcpcd.conf</p>
         <div>
           <form action="#">
+
+            <label>Interface</label>
+            <input
+              type="text"
+              id="interface"
+              name="interface"
+              placeholder={this.state.interface}
+              value={this.state.interface}
+              onChange={this.handleUserInput}
+            />
+
             <div className="dhcp">
               <input
                 name="dhcp"
