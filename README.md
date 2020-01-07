@@ -21,7 +21,7 @@ easy to setup:
 {
   "host": "0.0.0.0",
   "root": "/home/pi/axion-freecooling/www",
-  "post": [dhcpcd"]
+  "post": ["dhcpcd"]
 }
 ```
 
